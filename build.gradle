@@ -1,0 +1,33 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'http://clojars.org/repo' }
+    }
+    dependencies {
+        classpath 'clojuresque:clojuresque:1.7.0'
+    }
+}
+
+import clojuresque.ClojurePlugin
+
+subprojects {
+    repositories {
+        mavenCentral()
+        maven { url 'http://clojars.org/repo' }
+    }
+
+    plugins.withType(ClojurePlugin) {
+        clojure {
+            warnOnReflection = true
+            aotCompile = true
+        }
+        dependencies {
+            compile 'org.clojure:clojure:1.6.+'
+        }
+    }
+
+}
+
+project(':core') {
+    apply plugin: 'clojure'
+}

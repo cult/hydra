@@ -7,4 +7,12 @@ pom.xml.asc
 *.class
 /.lein-*
 /.nrepl-port
-.vagrant/
+.vagrant
+.gradle
+build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
