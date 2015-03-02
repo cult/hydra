@@ -31,7 +31,7 @@ RUN . .nix-profile/etc/profile.d/nix.sh && nix-channel --update
 
 
 # Copy our nix expression into the container
-COPY default.nix /home/app/
+#COPY default.nix /home/app/
 
 # run nix-build to pull the 
 RUN . .nix-profile/etc/profile.d/nix.sh && nix-env -iA nixpkgs.clojure
