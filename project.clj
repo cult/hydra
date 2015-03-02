@@ -3,6 +3,7 @@
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :plugins [[lein-modules "0.3.10"]]
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [co.paralleluniverse/pulsar "0.6.2"]]
   :java-agents [[co.paralleluniverse/quasar-core "0.6.2"]]
